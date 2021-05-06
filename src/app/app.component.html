@@ -1,0 +1,15 @@
+<h1 class="text-center mt-5">User Details</h1>
+
+<div class="text-center">
+    <input type="text" name="" class="form-control w-50 d-block mx-auto m-3" [(ngModel)]="item" id="name" placeholder="Enter Name">
+    <button type="submit" class="btn btn-warning" (click)="addItem()">Submit</button>
+</div>
+
+<div class="text-center m-4">
+    <button class="btn btn-info m-2" (click)="toggleShow()">{{isShown== false ? 'Show' : 'Hide'}}</button>
+    
+</div>
+
+<div *ngIf="isShown" class="text-center">
+    <h1 *ngFor="let x of data">{{x}}</h1>
+</div>
